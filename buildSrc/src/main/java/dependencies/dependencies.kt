@@ -16,7 +16,7 @@ object Versions {
 }
 
 object Deps {
-    const val androidGradlePlugin = "com.android.tools.build:gradle:4.2.0-alpha13"
+    const val androidGradlePlugin = "com.android.tools.build:gradle:4.2.0-alpha15"
 
     object Kotlin {
         const val version = "1.4.10"
@@ -24,9 +24,9 @@ object Deps {
         const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.10"
 
         object Coroutines {
-            const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9"
-            const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"
-            const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.9"
+            const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.0"
+            const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.0"
+            const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.0"
         }
     }
 
@@ -55,7 +55,7 @@ object Deps {
         }
 
         object Compose {
-            const val version = "1.0.0-alpha04"
+            const val version = "1.0.0-alpha06"
             const val runtime = "androidx.compose.runtime:runtime:$version"
             const val ui = "androidx.compose.ui:ui:$version"
             const val uiTooling = "androidx.ui:ui-tooling:$version"
@@ -90,7 +90,7 @@ object Deps {
     }
 
     object Accompanist {
-        const val coil = "dev.chrisbanes.accompanist:accompanist-coil:0.3.0"
+        const val coil = "dev.chrisbanes.accompanist:accompanist-coil:0.3.2"
     }
 
     const val timber = "com.jakewharton.timber:timber:4.7.1"
