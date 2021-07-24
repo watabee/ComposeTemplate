@@ -73,19 +73,20 @@ dependencies {
 
     implementation Deps.AndroidX.appcompat
     implementation Deps.AndroidX.activity
+    implementation Deps.AndroidX.activityCompose
     implementation Deps.AndroidX.fragment
     implementation Deps.AndroidX.core
 
     implementation Deps.AndroidX.Lifecycle.livedata
     implementation Deps.AndroidX.Lifecycle.viewmodel
-    implementation Deps.AndroidX.Hilt.viewmodel
-    kapt Deps.AndroidX.Hilt.compiler
 
     implementation Deps.Google.material
 
     // Compose
     implementation Deps.AndroidX.Compose.runtime
     implementation Deps.AndroidX.Compose.ui
+    implementation Deps.AndroidX.Compose.uiTooling
+    implementation Deps.AndroidX.Compose.uiToolingPreview
     implementation Deps.AndroidX.Compose.foundation
     implementation Deps.AndroidX.Compose.foundationLayout
     implementation Deps.AndroidX.Compose.material
@@ -94,7 +95,7 @@ dependencies {
     implementation Deps.Google.composeThemeAdapter
 
     implementation Deps.Coil.coil
-    implementation Deps.Accompanist.coil
+    implementation Deps.Coil.coilCompose
 
     implementation Deps.Dagger.Hilt.android
     kapt Deps.Dagger.Hilt.androidCompiler
