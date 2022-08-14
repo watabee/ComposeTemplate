@@ -1,6 +1,3 @@
-import dependencies.Deps
-import dependencies.Versions
-
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
@@ -9,10 +6,10 @@ plugins {
 }
 
 android {
-    compileSdkVersion Versions.androidCompileSdkVersion
+    compileSdk 32
     defaultConfig {
-        minSdkVersion Versions.androidMinSdkVersion
-        targetSdkVersion Versions.androidTargetSdkVersion
+        minSdkVersion 24
+        targetSdkVersion 32
     }
 
     compileOptions {
@@ -24,15 +21,15 @@ android {
 }
 
 dependencies {
-    implementation Deps.OkHttp.okhttp
-    debugImplementation Deps.OkHttp.loggingInterceptor
+    implementation libs.okhttp
+    debugImplementation libs.okhttp.logging
 
-    implementation Deps.Coil.coil
+    implementation libs.coil.kt
 
-    implementation Deps.Dagger.Hilt.android
-    kapt Deps.Dagger.Hilt.androidCompiler
+    implementation libs.hilt.android
+    kapt libs.hilt.compiler
 
-    implementation Deps.timber
+    implementation libs.timber
 
-    coreLibraryDesugaring Deps.desugarJdkLibs
+    coreLibraryDesugaring libs.android.desugarJdkLibs
 }

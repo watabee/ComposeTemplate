@@ -1,25 +1,19 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-import dependencies.Deps
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
     dependencies {
-        classpath Deps.androidGradlePlugin
-        classpath Deps.Kotlin.gradlePlugin
-        classpath Deps.Dagger.Hilt.androidGradlePlugin
+        classpath libs.android.gradlePlugin
+        classpath libs.kotlin.gradlePlugin
+        classpath libs.hilt.gradlePlugin
     }
 }
 
 allprojects {
-    repositories {
-        google()
-        jcenter()
-    }
-
     tasks.withType(KotlinCompile).configureEach {
         kotlinOptions {
             jvmTarget = "1.8"
