@@ -1,6 +1,4 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 buildscript {
     repositories {
         google()
@@ -10,15 +8,6 @@ buildscript {
         classpath libs.android.gradlePlugin
         classpath libs.kotlin.gradlePlugin
         classpath libs.hilt.gradlePlugin
-    }
-}
-
-allprojects {
-    tasks.withType(KotlinCompile).configureEach {
-        kotlinOptions {
-            jvmTarget = "1.8"
-            freeCompilerArgs += ["-Xallow-jvm-ir-dependencies", "-Xskip-prerelease-check"]
-        }
     }
 }
 

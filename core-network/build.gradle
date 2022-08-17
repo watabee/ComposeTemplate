@@ -1,23 +1,7 @@
 plugins {
-    id 'com.android.library'
-    id 'kotlin-android'
+    id "composetemplate.android.library"
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
-}
-
-android {
-    compileSdk 32
-    defaultConfig {
-        minSdkVersion 24
-        targetSdkVersion 32
-    }
-
-    compileOptions {
-        coreLibraryDesugaringEnabled true
-
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
 }
 
 dependencies {
@@ -30,6 +14,4 @@ dependencies {
     kapt libs.hilt.compiler
 
     implementation libs.timber
-
-    coreLibraryDesugaring libs.android.desugarJdkLibs
 }
